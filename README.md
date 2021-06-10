@@ -8,3 +8,5 @@ paste this code
 grant 777 access
 
 chmod 777 ~/bin/clone
+
+USAGE: clone [project-name]
