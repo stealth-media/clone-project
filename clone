@@ -2,7 +2,7 @@
 
 #create new bedrock project in sites
 cd ~/sites/
-git clone git@github.com:danv-stealthmedia/$1.git $1
+git clone git@github.com:stealth-media/$1.git $1
 cd ~/sites/$1
 
 
