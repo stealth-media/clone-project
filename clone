@@ -15,7 +15,7 @@ echo "DB_HOST=localhost" | sudo tee -a .env
 echo "DB_PREFIX=wp_" | sudo tee -a .env
 echo "WP_ENV=development" | sudo tee -a .env
 echo "WP_HOME=http://$1.test" | sudo tee -a .env
-echo "WP_SITEURL=${WP_HOME}/wp" | sudo tee -a .env
+echo "WP_SITEURL=http://$1.test/wp" | sudo tee -a .env
 echo "WP_DEBUG_LOG=/path/to/debug.log" | sudo tee -a .env
 echo "AUTH_KEY=&sy&jkot]%Q[Ho=S7g9,0[pAg:VU,k{>@O@,iqm8+7eXk6[DwS]a.2mI>)mD+he*" | sudo tee -a .env
 echo "SECURE_AUTH_KEY=z{t]r8Y1FEv#dUDp0PrW3V]Ud&(=K.',Lc/')bd*lMAR!A!DviEY/VtqB?I(_R['" | sudo tee -a .env
