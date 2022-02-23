@@ -9,8 +9,8 @@ cd ~/sites/$1
 #create update env file
 touch .env
 echo "DB_NAME=$1" | sudo tee -a .env
-echo "DB_USER=dan" | sudo tee -a .env
-echo "DB_PASSWORD=dan" | sudo tee -a .env
+echo "DB_USER=stealth" | sudo tee -a .env
+echo "DB_PASSWORD=stealth" | sudo tee -a .env
 echo "DB_HOST=localhost" | sudo tee -a .env
 echo "DB_PREFIX=wp_" | sudo tee -a .env
 echo "WP_ENV=development" | sudo tee -a .env
@@ -59,10 +59,10 @@ cd /etc/apache2/sites-available
 sudo touch $1.conf
 
 echo "<VirtualHost *:80>" | sudo tee -a $1.conf
-echo "ServerAdmin dan@localhost" | sudo tee -a $1.conf
+echo "ServerAdmin stealth@localhost" | sudo tee -a $1.conf
 echo "ServerName $1.test" | sudo tee -a $1.conf
-echo "DocumentRoot /home/dan/sites/$1/web" | sudo tee -a $1.conf
-echo "<Directory /home/dan/sites/$1/web>" | sudo tee -a $1.conf
+echo "DocumentRoot /home/stealth/sites/$1/web" | sudo tee -a $1.conf
+echo "<Directory /home/stealth/sites/$1/web>" | sudo tee -a $1.conf
 echo "Options Indexes FollowSymlinks Multiviews" | sudo tee -a $1.conf
 echo "AllowOverride All" | sudo tee -a $1.conf
 echo "Require all granted" | sudo tee -a $1.conf
@@ -76,4 +76,4 @@ sudo a2ensite $1.conf
 sudo service apache2 restart
 
 #create db
-mysql -u dan -p
+#mysql -u stealth -p
